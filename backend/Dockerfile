@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY app.py /app/
 
-RUN pip install flask
+RUN pip install flask pyjwt
 
 CMD ["python", "app.py"]
