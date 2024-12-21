@@ -1,15 +1,14 @@
 version: '3.8'
-
 services:
   backend:
     build: ./backend
     ports:
       - "5000:5000"
-  frontend:
+  frontend-web:
     image: node:16
     working_dir: /app
     volumes:
       - ./frontend/web:/app
+    command: ["npm", "start"]
     ports:
       - "3000:3000"
-    command: ["npm", "start"]

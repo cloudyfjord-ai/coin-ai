@@ -1,10 +1,19 @@
-# Coin AI
-Cloud-native coin and currency recognition application.
+# Coin Recognition App
+
+## Overview
+This project is a cloud-native web and mobile application for recognizing coins and currencies. It integrates with backend services for authentication and coin recognition.
 
 ## Features
-- **Login and Authentication**
-- **User Profile Management**
-- **Coin Recognition**
+- User Authentication
+- Coin and Currency Recognition
+- Web and Mobile Frontends
 
-## Usage
-Run `docker-compose up` to start the backend and frontend services.
+## Setup Instructions
+1. Clone the repository.
+2. Run the `setup.sh` script to initialize and deploy the project.
+
+## Technology Stack
+- React (Web Frontend)
+- React Native (Mobile Frontend)
+- Flask (Backend)
+- Docker & Kubernetes

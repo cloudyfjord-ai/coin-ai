@@ -1,42 +1,26 @@
-from flask import Flask, jsonify, request
-import jwt
-import datetime
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+CORS(app)
 
-users = {"admin": {"password": "password", "role": "admin"}}
+users = {"admin": {"password": "password", "profile": {"email": "admin@example.com", "name": "Admin"}}}
 
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
     username = data.get("username")
     password = data.get("password")
-
-    if username in users and users[username]['password'] == password:
-        token = jwt.encode({
-            'username': username,
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
-        }, app.secret_key, algorithm="HS256")
-        return jsonify({"token": token}), 200
-    return jsonify({"message": "Invalid credentials!"}), 401
-
-@app.route('/user/profile', methods=['GET'])
-def profile():
-    token = request.headers.get("Authorization")
-    try:
-        decoded = jwt.decode(token, app.secret_key, algorithms=["HS256"])
-        username = decoded["username"]
-        return jsonify({"username": username, "role": users[username]["role"]}), 200
-    except jwt.ExpiredSignatureError:
-        return jsonify({"message": "Token expired"}), 401
-    except jwt.InvalidTokenError:
-        return jsonify({"message": "Invalid token"}), 401
+    user = users.get(username)
+    if user and user["password"] == password:
+        return jsonify({"message": "Login successful", "profile": user["profile"]}), 200
+    return jsonify({"message": "Invalid credentials"}), 401
 
 @app.route('/recognize', methods=['POST'])
 def recognize():
-    # Mock response for coin recognition
-    return jsonify({"result": "Detected coin: Quarter, value: ./setup.sh.25"}), 200
+    data = request.get_json()
+    coin_type = data.get("coin_type")
+    return jsonify({"message": f"Recognized {coin_type}"}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
