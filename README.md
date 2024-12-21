@@ -1,5 +1,6 @@
 # Coin Recognition App
-## Author: Marci Wojcik with ChatGPT AI assist
+## Author
+Marci Wojcik with ChatGPT AI assist
 
 ## Overview
 This project is a cloud-native web and mobile application for recognizing coins and currencies. It integrates with backend services for authentication and coin recognition.
