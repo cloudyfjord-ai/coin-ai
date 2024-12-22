@@ -136,7 +136,7 @@ GitHub Issues: https://github.com/cloudyfjord-ai/coin-ai/issues
 Email: support@cloudyfjord.ai
 
 ## About CloudyFjord AI
-CloudyFjord AI is a state-of-the-art currency recognition platform designed for web and mobile applications. Developed by [Your Name/Organization], it uses advanced AI to simplify financial tasks.
+CloudyFjord AI is a state-of-the-art currency recognition platform designed for web and mobile applications. Developed by Marci Wojcik/CloudyFjord with ChatGPT, it uses advanced AI to simplify financial tasks.
 Add a "Keywords" section at the end:
 
 
