@@ -20,7 +20,7 @@ This project is a cloud-native web and mobile application for recognizing coins 
 - Flask (Backend)
 - Docker & Kubernetes
 
-- # Coin AI: Currency Recognition and Management Application
+# Coin AI: Currency Recognition and Management Application
 
 Coin AI is a cloud-native application that recognizes coins and currencies, integrates with AI-based logic for account services, and offers cross-platform compatibility for both iOS and Android mobile devices. This application also supports web-based access.
 
