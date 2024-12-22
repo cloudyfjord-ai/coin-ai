@@ -56,13 +56,11 @@ Coin AI is a cloud-native application that recognizes coins and currencies, inte
 ### Setup Instructions
 
 1. **Clone the Repository**:
-   ```bash
    git clone https://github.com/cloudyfjord-ai/coin-ai.git
    cd coin-ai
+   
 Run the Setup Script: Execute the setup script to configure the environment, build the project, and deploy:
 
-bash
-Copy code
 bash setup.sh
 Environment Configuration:
 
@@ -73,20 +71,20 @@ Running the Application Locally
 Start the Backend:
 
 bash
-Copy code
+
 cd backend
 python app.py
 Start the Web Frontend:
 
 bash
-Copy code
+
 cd frontend/web
 npm install
 npm start
 Start the Mobile Frontend:
 
 bash
-Copy code
+
 cd frontend/mobile
 npm install
 react-native run-android # For Android
@@ -108,12 +106,12 @@ Unit Tests:
 
 Backend: Run tests using pytest.
 bash
-Copy code
+
 cd backend
 pytest
 Frontend: Run tests using npm.
 bash
-Copy code
+
 cd frontend/web
 npm test
 End-to-End Tests:
@@ -125,7 +123,7 @@ We welcome contributions! To contribute:
 Fork the repository.
 Create a feature branch:
 bash
-Copy code
+
 git checkout -b feature/your-feature
 Push your changes and create a pull request.
 License
@@ -136,12 +134,15 @@ For support or inquiries, please contact:
 
 GitHub Issues: https://github.com/cloudyfjord-ai/coin-ai/issues
 Email: support@cloudyfjord.ai
-markdown
-Copy code
 
-### Next Steps
-1. **Integrate this README into the existing setup script** so it gets created and uploaded automatically to the GitHub repository.
-2. Ensure the setup script pushes all files, including the updated `README.md`, to the `main` branch on GitHub.
+## About CloudyFjord AI
+CloudyFjord AI is a state-of-the-art currency recognition platform designed for web and mobile applications. Developed by [Your Name/Organization], it uses advanced AI to simplify financial tasks.
+Add a "Keywords" section at the end:
+
+
+## Keywords
+coin recognition, AI, cloud-native application, React Native, Flutter, Kubernetes, Docker, CloudyFjord AI
+
 
 
 
